@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<title></title>
+
+<script>
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "https://io.adafruit.com/api/v2/mayukh/feeds/feed1",
+  "method": "GET"
+}
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+
+  var content = response.last_value;
+  $("#pin").append(content);
+
+
+
+});
+</script>
+</head>
+<body>
+<h1>google assistant controlled variable</h1>
+
+<h3><div id="pin">last value: </div></h3>
+
+
+</body>
+</html>
